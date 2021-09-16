@@ -1,9 +1,26 @@
 import React from "react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
+
 import { ContentWrapper } from "../ContentWrapper";
 import { Heading } from "../Heading";
 import * as S from "./styles";
 
 function Offers() {
+  async function copyPix() {
+    const inputPix = document.getElementById('copyText')
+    inputPix.select();
+    document.execCommand("copy");
+    await MySwal.fire({
+      title: <strong>Copiado!</strong>,
+      html: <i>Cole na área PIX do seu app bancário</i>,
+      icon: "success",
+      confirmButtonColor: "#00155e",
+    });
+  }
+
   return (
     <S.Container>
       <Heading>Dízimos e Ofertas</Heading>
@@ -26,10 +43,10 @@ function Offers() {
                 readOnly="readonly"
               />
               <S.InfoOption>
-                Se preferir você pode somente copiar esse email e colar na área de
-                PIX - E-mail no app do seu banco
+                Se preferir você pode somente copiar esse email e colar na área
+                de PIX - E-mail no app do seu banco
               </S.InfoOption>
-              <S.Button id="copyBtn">
+              <S.Button onClick={copyPix}>
                 <i className="ph-copy"></i>COPIAR CHAVE PIX
               </S.Button>
             </div>
