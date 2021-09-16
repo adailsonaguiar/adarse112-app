@@ -9,31 +9,32 @@ const Carousel = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 8,
-    slidesToScroll: 2,
+    slidesToScroll: 3,
+    arrows: false,
     responsive: [
       {
         breakpoint: 760,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-        }
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2
-        }
-      }
-    ]
+          slidesToScroll: 2,
+        },
+      },
+    ],
   };
 
   const SLIDES = [
