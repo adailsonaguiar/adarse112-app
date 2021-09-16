@@ -2,6 +2,8 @@ import Head from "next/head";
 
 import "../styles/globals.css";
 import "../styles/integration/player.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -21,8 +23,6 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         />
-
-        <link rel="stylesheet" href="styles/sweetalert2.min.css" />
 
         <link
           rel="stylesheet"

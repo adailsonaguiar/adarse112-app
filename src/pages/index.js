@@ -8,6 +8,7 @@ import { SectionWrapper } from "../components/Section";
 import Offers from "../components/Offers";
 import OurPastor from "../components/OurPastor";
 import Footer from "../components/Footer";
+import Carousel from "../components/Carousel";
 
 // const Location = dynamic(() => import("../component/Location"), { ssr: false });
 
@@ -21,6 +22,9 @@ export default function Home() {
       <Header />
       <main>
         <MainBanner />
+        <SectionWrapper>
+          <Carousel />
+        </SectionWrapper>
         <SectionWrapper id="cultos">
           <Schedule />
         </SectionWrapper>
