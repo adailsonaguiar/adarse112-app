@@ -1,10 +1,5 @@
-// import Analytics from "components/Analytics";
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from "next/document";
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -12,11 +7,12 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
+    const App = (App) => (props) => sheet.collectStyles(<App {...props} />);
+
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
+          enhanceApp: App,
         });
 
       const initialProps = await Document.getInitialProps(ctx);

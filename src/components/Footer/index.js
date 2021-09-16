@@ -25,8 +25,10 @@ function Footer() {
           </div>
           <S.Links>
             <nav>
-              {menuNavs.map((item) => (
-                <a href={item.link}>{item.label}</a>
+              {menuNavs.map((item, index) => (
+                <a key={index} href={item.link}>
+                  {item.label}
+                </a>
               ))}
             </nav>
           </S.Links>
@@ -63,7 +65,7 @@ function Footer() {
                 viewBox="0 0 24 24"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M21.39 4.514a3.007 3.007 0 012.116 2.115c.514 1.878.494 5.793.494 5.793s0 3.894-.494 5.772a3.007 3.007 0 01-2.116 2.116c-1.878.494-9.39.494-9.39.494s-7.493 0-9.39-.514a3.007 3.007 0 01-2.116-2.116C0 16.316 0 12.402 0 12.402s0-3.895.494-5.773A3.068 3.068 0 012.61 4.494C4.488 4 12 4 12 4s7.513 0 9.391.514zm-5.535 7.888L9.608 16V8.804l6.247 3.598z"
                   clipRule="evenodd"
                 ></path>
