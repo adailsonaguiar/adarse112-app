@@ -22,9 +22,9 @@ export default function Home() {
       <Header />
       <main>
         <MainBanner />
-        <SectionWrapper>
+        {/* <SectionWrapper>
           <Carousel />
-        </SectionWrapper>
+        </SectionWrapper> */}
         <SectionWrapper id="cultos">
           <Schedule />
         </SectionWrapper>
