@@ -9,6 +9,7 @@ import Offers from "../components/Offers";
 import OurPastor from "../components/OurPastor";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
+import WeekSchedule from "../components/WeekSchedule";
 
 // const Location = dynamic(() => import("../component/Location"), { ssr: false });
 
@@ -25,6 +26,7 @@ export default function Home() {
         {/* <SectionWrapper>
           <Carousel />
         </SectionWrapper> */}
+
         <SectionWrapper id="cultos">
           <Schedule />
         </SectionWrapper>
@@ -32,6 +34,10 @@ export default function Home() {
         <SectionWrapper id="onde-estamos">
           <Location />
         </SectionWrapper>
+
+      {/*   <SectionWrapper>
+          <WeekSchedule />
+        </SectionWrapper> */}
 
         <SectionWrapper id="dizimos">
           <Offers />
