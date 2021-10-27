@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content="A IGREJA DA COMUNHÃO | Nação Madureira | Palmas - Tocantins"
         />
-        <meta property="og:image" content="/img/logo-ligth.png" />
+        <meta property="og:image" content="/img/meta.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://adarse112.com/" />
@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps }) {
           property="twitter:description"
           content="A IGREJA DA COMUNHÃO | Nação Madureira | Palmas - Tocantins"
         />
-        <meta property="twitter:image" content="/img/logo-ligth.png"></meta>
+        <meta property="twitter:image" content="/img/meta.png"></meta>
       </Head>
       <Component {...pageProps} />
     </>
