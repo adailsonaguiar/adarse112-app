@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import Header from "../components/Header";
 import dynamic from "next/dynamic";
 
-// const Map = dynamic(() => import('components/Map'), { ssr: false })
 import MainBanner from "../components/MainBanner";
 import Schedule from "../components/Schedule";
 import { SectionWrapper } from "../components/Section";
@@ -30,6 +29,7 @@ export default function Home(props) {
         {/* <SectionWrapper>
           <Carousel />
         </SectionWrapper> */}
+
         <SectionWrapper id="cultos">
           <Schedule />
         </SectionWrapper>
@@ -37,6 +37,10 @@ export default function Home(props) {
         <SectionWrapper id="billboard">
           <EventsCarousel events={props.events} />
         </SectionWrapper>
+
+      {/*   <SectionWrapper>
+          <WeekSchedule />
+        </SectionWrapper> */}
 
         <SectionWrapper id="dizimos">
           <Offers />
