@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "../components/Header";
 import dynamic from "next/dynamic";
 
@@ -9,6 +10,8 @@ import Offers from "../components/Offers";
 import OurPastor from "../components/OurPastor";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
+import EventsCarousel from "../components/EventsCarousel";
+import { api } from "../services/api";
 
 // const Location = dynamic(() => import("../component/Location"), { ssr: false });
 
@@ -16,17 +19,22 @@ const Location = dynamic(() => import("../components/Location"), {
   ssr: false,
 });
 
-export default function Home() {
+export default function Home(props) {
+  useEffect(() => {}, []);
   return (
     <>
       <Header />
       <main>
         <MainBanner />
-        <SectionWrapper>
+        {/* <SectionWrapper>
           <Carousel />
-        </SectionWrapper>
+        </SectionWrapper> */}
         <SectionWrapper id="cultos">
           <Schedule />
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <EventsCarousel events={props.events} />
         </SectionWrapper>
 
         <SectionWrapper id="onde-estamos">
@@ -53,4 +61,12 @@ export default function Home() {
     //   async
     // ></script>
   );
+}
+
+export async function getServerSideProps(context) {
+  const response = await api.get("events");
+  console.log("@res111444", process.env.NEXT_APP_URL_API);
+  return {
+    props: { events: response.data },
+  };
 }
