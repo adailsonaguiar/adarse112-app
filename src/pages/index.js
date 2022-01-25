@@ -12,6 +12,7 @@ import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 import EventsCarousel from "../components/EventsCarousel";
 import { api } from "../services/api";
+import FloatRadio from "../components/FloatRadio";
 
 // const Location = dynamic(() => import("../component/Location"), { ssr: false });
 
@@ -33,22 +34,23 @@ export default function Home(props) {
           <Schedule />
         </SectionWrapper>
 
-        <SectionWrapper>
+        <SectionWrapper id="billboard">
           <EventsCarousel events={props.events} />
-        </SectionWrapper>
-
-        <SectionWrapper id="onde-estamos">
-          <Location />
         </SectionWrapper>
 
         <SectionWrapper id="dizimos">
           <Offers />
         </SectionWrapper>
 
+        <SectionWrapper id="onde-estamos">
+          <Location />
+        </SectionWrapper>
+
         <SectionWrapper>
           <OurPastor />
         </SectionWrapper>
       </main>
+      {/* <FloatRadio /> */}
       <Footer />
     </>
     // <script src="scripts/scripts.js"></script>

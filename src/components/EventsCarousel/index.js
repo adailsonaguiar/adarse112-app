@@ -32,7 +32,7 @@ const EventsCarousel = ({ events }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: false,
+    autoplay: true,
     speed: 500,
     autoplaySpeed: 4000,
     cssEase: "linear",

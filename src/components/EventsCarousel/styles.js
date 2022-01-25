@@ -2,16 +2,11 @@ import styled from "styled-components";
 
 export const Caroulsel = styled.div`
   padding: 1rem 0;
-  background: #355ca1;
+  /* background: #355ca1; */
 
   .slick-dots {
     position: absolute;
     bottom: 0;
-
-    li button::before {
-      font-size: 20px;
-      color: #fff;
-    }
   }
 
   .slick-arrow {
@@ -28,7 +23,7 @@ export const Caroulsel = styled.div`
     & svg {
       width: 20px;
       height: 20px;
-      color: #fff;
+      color: #000;
     }
   }
 
@@ -56,7 +51,7 @@ export const Caroulsel = styled.div`
     & svg {
       width: 20px;
       height: 20px;
-      color: #fff;
+      color: #000;
     }
   }
 

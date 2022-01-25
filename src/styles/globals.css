@@ -1,11 +1,12 @@
 :root {
   --color-white: rgba(255, 255, 255, 1);
-  --color-primary: #181818;
-  --color-btn-success: #2e3ee8;
+  --color-primary: #282828;
+  --color-btn-success: #4e9cb5;
   --color-main-darker: #00155e;
   --color-gray-10: ##f8f8f8;
-  --color-gray-100: #f1f1f1;
+  --color-gray-100: #f0f0f0;
   --color-gray-200: #dadada;
+  --color-gray-700: #666;
   --color-gray-800: #545454;
   --color-gray-900: #3c3c3c;
 

@@ -10,13 +10,14 @@ function Header() {
     { label: "Cultos", link: "#cultos" },
     { label: "Onde Estamos", link: "#onde-estamos" },
     { label: "Ofertas", link: "#dizimos" },
+    { label: "Avisos", link: "#billboard" },
   ];
 
   return (
     <>
       <S.Container>
         <div className="player-wrapper">
-          <ContentWrapper>
+          {/* <ContentWrapper>
             <iframe
               src="https://adailsonaguiar.github.io/player-radio-paz"
               frameBorder="0"
@@ -24,7 +25,7 @@ function Header() {
               scrolling="no"
             ></iframe>
             <h3 className="radio-paz">Rádio Paz Palmas... | 89,9</h3>
-          </ContentWrapper>
+          </ContentWrapper> */}
         </div>
         <header>
           <ContentWrapper>

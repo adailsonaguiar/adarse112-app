@@ -12,26 +12,24 @@ export const Card = styled.a`
   padding-bottom: 3rem;
 
   .info-wrapper {
-    color: #fff;
-    margin-right: 8rem;
+    color: #282828;
 
     & h2 {
-      font-weight: 700;
-      font-size: 56px;
+      font-weight: 600;
+      font-size: 5rem;
     }
 
     & p {
-      font-weight: 600;
-      font-size: 25px;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 3rem;
+      color: #666;
     }
   }
 
   .banner {
     max-width: 50%;
-    height: 90%;
-
-    -webkit-box-shadow: 34px 34px 0px #ffffff;
-    box-shadow: 34px 34px 0px #ffffff;
+    max-height: 90%;
   }
 
   @media (max-width: 800px) {
@@ -49,7 +47,7 @@ export const Card = styled.a`
       margin-bottom: 5rem;
 
       & h2 {
-        font-size: 4rem;
+        font-size: 3.5rem;
       }
 
       & p {

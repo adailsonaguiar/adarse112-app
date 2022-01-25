@@ -59,8 +59,8 @@ export const MenuNav = styled.nav`
 export const ItemNav = styled.a`
   color: var(--color-gray-800);
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 700;
   letter-spacing: 2.25px;
   text-transform: uppercase;
   margin-left: 2rem;
@@ -68,7 +68,7 @@ export const ItemNav = styled.a`
   border-radius: 0.5rem;
 
   &:hover {
-    color: darker(var(--color-gray-800, 1%));
+    color: var(--color-btn-success);
   }
 `;
 
