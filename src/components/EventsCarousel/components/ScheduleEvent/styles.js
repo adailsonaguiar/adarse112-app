@@ -9,6 +9,7 @@ export const Card = styled.a`
   width: 90%;
   max-width: 1080px;
   margin: auto;
+  padding-bottom: 3rem;
 
   .info-wrapper {
     color: #fff;
@@ -48,11 +49,11 @@ export const Card = styled.a`
       margin-bottom: 5rem;
 
       & h2 {
-        font-size: 5rem;
+        font-size: 4rem;
       }
 
       & p {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
   }

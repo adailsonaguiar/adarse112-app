@@ -50,8 +50,8 @@ export const Caroulsel = styled.div`
 
   @media (max-width: 800px) {
     .slick-arrow {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 
     & svg {
       width: 20px;
