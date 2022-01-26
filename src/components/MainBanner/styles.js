@@ -30,7 +30,7 @@ export const BannerSection = styled.div`
     left: 0;
     right: 0;
     color: #fff;
-    z-index: var(--elevation-z-inter);
+    z-index: var(--elevation-z-base);
   }
 
   & h1 {
