@@ -5,7 +5,7 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2000;
+  z-index: var(--elevation-z-inter);
   width: 100%;
 
   & header {
@@ -84,7 +84,7 @@ export const MenuWrapper = styled.div`
     background-color: var(--color-white);
     height: 100vh;
     width: 100%;
-    z-index: 2000;
+    z-index: var(--elevation-z-top);
     position: fixed;
     opacity: ${open ? 1 : 0};
     pointer-events: ${open ? "all" : "none"};
@@ -93,14 +93,12 @@ export const MenuWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    transform: translateY(3rem);
+    flex-direction: column;
 
     & .links {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 15rem;
     }
 
     & ${ItemNav} {
@@ -108,4 +106,11 @@ export const MenuWrapper = styled.div`
       margin: 0;
     }
   `}
+
+  .social {
+    position: absolute;
+    bottom: 8%;
+    display: flex;
+    gap: 1rem;
+  }
 `;

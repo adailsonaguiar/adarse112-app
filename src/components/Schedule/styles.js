@@ -10,30 +10,6 @@ export const Container = styled.div`
     grid-gap: 0.6rem;
     width: 100%;
   }
-
-  /* /* @media (max-width: 1170px) {
-    .cultos .horarios-wrapper {
-      grid-template-columns: Repeat(3, 1fr);
-    }
-  } */
-
-  @media (max-width: 1143px) {
-    & .horarios-wrapper {
-      /* grid-template-columns: Repeat(4, 1fr); */
-    }
-  }
-
-  @media (max-width: 760px) {
-    & .horarios-wrapper {
-      /* grid-template-columns: Repeat(3, 1fr); */
-    }
-  }
-
-  @media (max-width: 513px) {
-    & .horarios-wrapper {
-      /* grid-template-columns: Repeat(2, 1fr); */
-    }
-  }
 `;
 
 export const Card = styled.div`
@@ -42,11 +18,13 @@ export const Card = styled.div`
   padding: 1rem 1.5rem;
   box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
   background: #fff;
+  cursor: pointer;
+  animation: all 0.5s ease-in-out;
 
   & h4 {
     font-size: 1.2em;
     line-height: 3rem;
-    color: var(--color-btn-success);
+    color: var(--color-primary);
     text-transform: uppercase;
     font-weight: 600;
     width: 100%;
@@ -60,5 +38,11 @@ export const Card = styled.div`
     width: 100%;
     text-align: center;
     font-weight: 300;
+  }
+
+  &:hover {
+    h4 {
+      color: var(--color-btn-success);
+    }
   }
 `;

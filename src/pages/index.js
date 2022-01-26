@@ -54,7 +54,7 @@ export default function Home(props) {
           <OurPastor />
         </SectionWrapper>
       </main>
-      {/* <FloatRadio /> */}
+      <FloatRadio />
       <Footer />
     </>
     // <script src="scripts/scripts.js"></script>

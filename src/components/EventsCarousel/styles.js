@@ -18,7 +18,7 @@ export const Caroulsel = styled.div`
     border-radius: 50%;
     background: #ffffff2e;
     position: absolute;
-    z-index: 5;
+    z-index: var(--elevation-z-base);
 
     & svg {
       width: 20px;
