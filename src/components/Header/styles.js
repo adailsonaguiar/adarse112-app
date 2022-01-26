@@ -5,7 +5,7 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2000;
+  z-index: var(--elevation-z-inter);
   width: 100%;
 
   & header {
@@ -59,8 +59,8 @@ export const MenuNav = styled.nav`
 export const ItemNav = styled.a`
   color: var(--color-gray-800);
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 700;
   letter-spacing: 2.25px;
   text-transform: uppercase;
   margin-left: 2rem;
@@ -68,7 +68,7 @@ export const ItemNav = styled.a`
   border-radius: 0.5rem;
 
   &:hover {
-    color: darker(var(--color-gray-800, 1%));
+    color: var(--color-btn-success);
   }
 `;
 
@@ -84,7 +84,7 @@ export const MenuWrapper = styled.div`
     background-color: var(--color-white);
     height: 100vh;
     width: 100%;
-    z-index: 2000;
+    z-index: var(--elevation-z-top);
     position: fixed;
     opacity: ${open ? 1 : 0};
     pointer-events: ${open ? "all" : "none"};
@@ -93,14 +93,12 @@ export const MenuWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    transform: translateY(3rem);
+    flex-direction: column;
 
     & .links {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 15rem;
     }
 
     & ${ItemNav} {
@@ -108,4 +106,11 @@ export const MenuWrapper = styled.div`
       margin: 0;
     }
   `}
+
+  .social {
+    position: absolute;
+    bottom: 8%;
+    display: flex;
+    gap: 1rem;
+  }
 `;

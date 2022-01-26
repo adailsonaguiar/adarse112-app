@@ -9,29 +9,26 @@ const Carousel = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 8,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 760,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
     ],
@@ -50,10 +47,6 @@ const Carousel = () => {
     },
     {
       image:
-        "https://vereadorfilipemartins.com.br/image/Logo/logo_vereador_filipe_martins_2020_1080.png",
-    },
-    {
-      image:
         "https://upload.wikimedia.org/wikipedia/pt/c/ca/Conven%C3%A7%C3%A3o_Nacional_das_Assembleias_de_Deus_no_Brasil_-_Minist%C3%A9rio_de_Madureira.jpg",
     },
     {
@@ -62,9 +55,12 @@ const Carousel = () => {
     },
     {
       image:
-        "https://vereadorfilipemartins.com.br/image/Logo/logo_vereador_filipe_martins_2020_1080.png",
+        "https://cdn.awsli.com.br/400x300/1074/1074764/logo/e0dfa26b01.png",
     },
-    { image: "https://www.nacaomadureira.com.br/images/radio_paz.png" },
+    {
+      image:
+        "https://scontent.fpmw4-1.fna.fbcdn.net/v/t31.18172-8/28616490_178313426288622_4044843332954801367_o.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=N7bmhctQ-mgAX_TsGR4&tn=SuiJC8XNhrf4xrXu&_nc_ht=scontent.fpmw4-1.fna&oh=b8c7a331e3821d20f1b02ff5ae0516ad&oe=616FD49C",
+    },
   ];
 
   return (

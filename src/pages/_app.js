@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import "../styles/globals.css";
 import "../styles/integration/player.css";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function MyApp({ Component, pageProps }) {
@@ -31,10 +31,34 @@ function MyApp({ Component, pageProps }) {
           type="text/css"
           media="all"
         />
+
+        <title>Nação Madureira - AD ARSE 112</title>
+        <meta name="title" content="Nação Madureira - AD ARSE 112" />
         <meta
           name="description"
           content="A IGREJA DA COMUNHÃO | Nação Madureira | Palmas - Tocantins"
         />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://adarse112.com/" />
+        <meta property="og:title" content="Nação Madureira - AD ARSE 112" />
+        <meta
+          property="og:description"
+          content="A IGREJA DA COMUNHÃO | Nação Madureira | Palmas - Tocantins"
+        />
+        <meta property="og:image" content="/img/meta.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://adarse112.com/" />
+        <meta
+          property="twitter:title"
+          content="Nação Madureira - AD ARSE 112"
+        />
+        <meta
+          property="twitter:description"
+          content="A IGREJA DA COMUNHÃO | Nação Madureira | Palmas - Tocantins"
+        />
+        <meta property="twitter:image" content="/img/meta.png"></meta>
       </Head>
       <Component {...pageProps} />
     </>

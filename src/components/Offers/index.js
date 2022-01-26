@@ -17,7 +17,7 @@ function Offers() {
       title: <strong>Copiado!</strong>,
       html: <i>Cole na área PIX do seu app bancário</i>,
       icon: "success",
-      confirmButtonColor: "#00155e",
+      confirmButtonColor: "#4e9cb5",
     });
   }
 

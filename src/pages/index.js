@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import Header from "../components/Header";
 import dynamic from "next/dynamic";
 
-// const Map = dynamic(() => import('components/Map'), { ssr: false })
 import MainBanner from "../components/MainBanner";
 import Schedule from "../components/Schedule";
 import { SectionWrapper } from "../components/Section";
@@ -9,7 +9,9 @@ import Offers from "../components/Offers";
 import OurPastor from "../components/OurPastor";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
-import WeekSchedule from "../components/WeekSchedule";
+import EventsCarousel from "../components/EventsCarousel";
+import { api } from "../services/api";
+import FloatRadio from "../components/FloatRadio";
 
 // const Location = dynamic(() => import("../component/Location"), { ssr: false });
 
@@ -17,7 +19,8 @@ const Location = dynamic(() => import("../components/Location"), {
   ssr: false,
 });
 
-export default function Home() {
+export default function Home(props) {
+  useEffect(() => {}, []);
   return (
     <>
       <Header />
@@ -31,8 +34,8 @@ export default function Home() {
           <Schedule />
         </SectionWrapper>
 
-        <SectionWrapper id="onde-estamos">
-          <Location />
+        <SectionWrapper id="billboard">
+          <EventsCarousel events={props.events} />
         </SectionWrapper>
 
       {/*   <SectionWrapper>
@@ -43,10 +46,15 @@ export default function Home() {
           <Offers />
         </SectionWrapper>
 
+        <SectionWrapper id="onde-estamos">
+          <Location />
+        </SectionWrapper>
+
         <SectionWrapper>
           <OurPastor />
         </SectionWrapper>
       </main>
+      <FloatRadio />
       <Footer />
     </>
     // <script src="scripts/scripts.js"></script>
@@ -59,4 +67,12 @@ export default function Home() {
     //   async
     // ></script>
   );
+}
+
+export async function getServerSideProps(context) {
+  const response = await api.get("events");
+  console.log("@res111444", process.env.NEXT_APP_URL_API);
+  return {
+    props: { events: response.data },
+  };
 }

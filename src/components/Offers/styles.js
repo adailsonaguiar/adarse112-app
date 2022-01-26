@@ -15,24 +15,22 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--color-main-darker);
-    border-radius: 0.7rem;
+    background: var(--color-white);
+    border-radius: 0.1rem;
     padding: 5rem 4rem;
-    -webkit-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
-    color: var(--color-gray-200);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
+    color: var(--color-primary);
   }
 
   & .bank {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--color-main-darker);
-    border-radius: 0.7rem;
+    background: var(--color-white);
+    border-radius: 0.1rem;
     padding: 5rem 4rem;
-    -webkit-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
-    color: var(--color-gray-200);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
+    color: var(--color-primary);
   }
 
   & .qrcode {
@@ -61,25 +59,27 @@ export const Container = styled.div`
 `;
 
 export const NameOption = styled.h2`
-  font-size: 3.5rem;
-  font-weight: 600;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 2rem;
   width: 100%;
-  color: var(--color-white);
+  color: var(--color-primary);
   text-align: center;
 `;
 
 export const SubtitleOffer = styled.h3`
-  font-size: 2rem;
-  color: var(--color-gray-200);
+  font-size: 1.6rem;
+  color: var(--color-btn-success);
 `;
 
 export const InfoOption = styled.p`
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 2.6rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 2rem;
   margin-top: 0.6rem;
   text-align: center;
+  color: var(--color-gray-700);
 `;
 
 export const TextField = styled.input`
@@ -92,7 +92,7 @@ export const TextField = styled.input`
 `;
 
 export const Button = styled.button`
-  background: var(--color-btn-success);
+  background: var(--color-primary);
   border: 0;
   height: 4.6rem;
   padding: 0 11rem;
@@ -105,7 +105,7 @@ export const Button = styled.button`
   font-size: 1.3rem;
 
   &:hover {
-    background: #2732ad;
+    background: var(--color-btn-success);
   }
 
   @media (max-width: 760px) {

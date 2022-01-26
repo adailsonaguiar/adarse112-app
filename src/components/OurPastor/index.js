@@ -7,7 +7,7 @@ import * as S from "./styles";
 function OurPastor() {
   return (
     <S.PastorWrapper>
-      <ContentWrapper>
+      <ContentWrapper className="section-wrapper">
         <Heading>Pr. João Paulo Arantes</Heading>
         <div className="pastor-wrapper">
           <S.PastorInfo>
