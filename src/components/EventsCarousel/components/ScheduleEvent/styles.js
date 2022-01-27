@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const Card = styled.a`
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
   border-radius: 1rem;
   height: calc(100vh - 100px);
   width: 90%;
@@ -38,8 +40,6 @@ export const Card = styled.a`
     .banner {
       height: 45%;
       max-width: 100%;
-      -webkit-box-shadow: 15px 15px 0px #ffffff;
-      box-shadow: 15px 15px 0px #ffffff;
     }
 
     .info-wrapper {

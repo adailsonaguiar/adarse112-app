@@ -70,8 +70,7 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  const response = await api.get("events");
-  console.log("@res111444", process.env.NEXT_APP_URL_API);
+  const response = await api.get("events.json");
   return {
     props: { events: response.data },
   };
