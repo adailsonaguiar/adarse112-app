@@ -10,10 +10,10 @@ export const Container = styled.div`
 
   & header {
     display: flex;
-    background-color: var(--color-white);
+    /* background-color: var(--color-white); */
     height: 6.4rem;
     width: 100%;
-    border-bottom: 1px solid var(--color-gray-800);
+    /* border-bottom: 1px solid var(--color-gray-800); */
   }
 
   & .player-wrapper {
@@ -57,9 +57,9 @@ export const MenuNav = styled.nav`
 `;
 
 export const ItemNav = styled.a`
-  color: var(--color-gray-800);
+  color: var(--color-white);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 2.25px;
   text-transform: uppercase;
