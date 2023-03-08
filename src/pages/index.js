@@ -70,7 +70,7 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  const response = await api.get("events.json");
+  const response = await api.get("events");
   return {
     props: { events: response.data },
   };
