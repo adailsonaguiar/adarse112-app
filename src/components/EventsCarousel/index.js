@@ -3,8 +3,6 @@ import { ScheduleEvent } from "./components/ScheduleEvent";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import * as S from "./styles";
-import { useEffect } from "react";
-import { api } from "../../services/api";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
