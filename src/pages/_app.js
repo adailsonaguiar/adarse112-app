@@ -1,7 +1,6 @@
 import Head from "next/head";
 
 import "../styles/globals.css";
-import "../styles/integration/player.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -24,12 +23,10 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
-          id="sanfran-google-font-inter-css"
-          href="//fonts.googleapis.com/css?family=Inter%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&amp;subset=latin&amp;ver=5.5.3"
-          type="text/css"
-          media="all"
         />
 
         <title>Nação Madureira - AD ARSE 112</title>
