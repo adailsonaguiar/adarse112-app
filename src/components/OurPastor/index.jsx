@@ -5,7 +5,7 @@ import { Heading } from "../Heading";
 
 function OurPastor() {
   return (
-    <SectionWrapper title="" style="pt-0">
+    <SectionWrapper title="" style="pt-0 bg-white">
       <div className="flex justify-center">
         <div className="pastor-wrapper flex flex-col md:flex-row px-10">
           <div className="flex flex-col justify-center w-full">
