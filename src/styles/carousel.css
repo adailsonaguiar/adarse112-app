@@ -1,0 +1,18 @@
+.carousel-wrapper {
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .slick-arrow {
+   display: none !important;
+  }
+
+  .slick-prev {
+    left: 10px;
+  }
+
+  .slick-next {
+    right: 10px;
+  }
+}

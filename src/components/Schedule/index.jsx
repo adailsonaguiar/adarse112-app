@@ -13,11 +13,11 @@ function Schedule() {
     { title: "Culto da Família", day: "Domingo", hour: "19h00" },
   ];
   return (
-    <SectionWrapper title="NOSSOS CULTOS" style="bg-neutral-200 pb-20">
+    <SectionWrapper title="NOSSOS CULTOS" style="bg-neutral-200 py-20">
       <div className="px-14 w-full flex flex-col items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {schedule.map((item, index) => (
-            <div key={index} className="mb-10 flex items-center">
+            <div key={index} className="mb-10 flex items-center md:px-36">
               <div className="flex flex-col w-full">
                 <h4 className="text-5xl font-black tracking-wide text-madureira-100 mb-4">
                   {item.title}

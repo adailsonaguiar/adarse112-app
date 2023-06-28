@@ -3,8 +3,8 @@ import { Heading } from "../Heading";
 
 export function SectionWrapper({ title, children, style }) {
   return (
-    <section className={`pt-20 ${style}`}>
-      <Heading>{title}</Heading>
+    <section className={style.length ? style : "pt-20"}>
+      {title.length ? <Heading>{title}</Heading> : null}
       <div className="pt-20">{children}</div>
     </section>
   );
