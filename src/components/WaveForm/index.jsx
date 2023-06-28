@@ -50,7 +50,7 @@ export const WaveForm = ({ analyzerData }) => {
 
   return (
     <canvas
-      className="pointer-events-none"
+      className="pointer-events-none opacity-20"
       style={{
         position: "fixed",
         bottom: "0",
