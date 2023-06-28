@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/dist/client/link";
 
 function Header() {
-  const [openMenu, setOpenMenu] = useState(false);
   const menuNavs = [
     { label: "CULTOS", link: "#cultos" },
     { label: "ONDE ESTAMOS", link: "#onde-estamos" },
@@ -13,7 +13,15 @@ function Header() {
   return (
     <>
       <header className="fixed top-0 flex flex-row justify-between items-center h-40 px-10 md:px-60 py-7 w-full z-50 bg-madureira-700">
-        <Image width={'80%'} height={'80%'} src="/img/logo-white.svg" alt="logo ad arse 112" />
+        <Link href="/" passHref>
+          <Image
+            className="cursor-pointer"
+            width={"80%"}
+            height={"80%"}
+            src="/img/logo-white.svg"
+            alt="logo ad arse 112"
+          />
+        </Link>
         <nav className="hidden gap-10 text-2xl text-white items-center tracking-widest">
           {menuNavs.map((item, index) => (
             <a key={index} href={item.link}>
