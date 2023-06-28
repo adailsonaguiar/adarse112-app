@@ -15,9 +15,7 @@ function animateBars(analyser, canvas, canvasCtx, dataArray, bufferLength) {
   for (var i = 0; i < bufferLength; i++) {
     barHeight = (dataArray[i] / 300) * HEIGHT;
     const blueShade = Math.floor((dataArray[i] / 255) * 4); // generate a shade of blue based on the audio input
-    const blueHex = ["#61dafb", "#5ac8fa", "#50b6f5", "#419de6"][
-      blueShade
-    ]; // use react logo blue shades
+    const blueHex = ["#61dafb", "#5ac8fa", "#50b6f5", "#419de6"][blueShade]; // use react logo blue shades
     canvasCtx.fillStyle = blueHex;
     canvasCtx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
 
@@ -52,7 +50,7 @@ export const WaveForm = ({ analyzerData }) => {
 
   return (
     <canvas
-    className="pointer-events-none"
+      className="pointer-events-none"
       style={{
         position: "fixed",
         bottom: "0",
