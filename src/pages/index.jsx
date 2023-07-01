@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-
+import React from "react";
 import MainBanner from "../components/MainBanner";
 import Schedule from "../components/Schedule";
 import { SectionWrapper } from "../components/Section";
@@ -10,7 +9,25 @@ import EventsCarousel from "../components/EventsCarousel";
 import { api } from "../services/api";
 
 export default function Home(props) {
-  useEffect(() => {}, []);
+  // const toggleHeader = () => {
+  //   const header = document.getElementById("head");
+  //   const headerClassList = header.classList;
+
+  //   window.addEventListener("scroll", () => {
+  //     if (window.scrollY >= 200) {
+  //       headerClassList.toggle("scrollHide");
+  //       // if (!headerClassList.contains("scrollHide")) {
+  //       //   headerClassList.add("scrollHide");
+  //       // }
+  //     }
+  //     // } else {
+  //     //   if (headerClassList.contains('scrollHide')) {
+  //     //     headerClassList.remove('scrollHide')
+  //     //   }
+  //     // }
+  //   });
+  // };
+  // React.useEffect(() => {toggleHeader()}, []);
   return (
     <>
       {/* <Header /> */}

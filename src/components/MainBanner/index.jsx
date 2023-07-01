@@ -13,7 +13,7 @@ function MainBanner({ links }) {
       <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center flex-col md:flex-row lg:justify-center py-20">
         <div className="flex items-center gap-5">
           <img
-            className="w-28 pb-10 lg:w-1/7"
+            className="w-28 pb-10 lg:w-56"
             src="img/logo-white.svg"
             alt="logo ad arse 112"
           />
