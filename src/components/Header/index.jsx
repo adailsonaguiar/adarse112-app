@@ -7,7 +7,7 @@ function Header() {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = React.useState(false);
   const menuNavs = [
     { label: "Home", link: "/" },
-    { label: "Onde estamos", link: "/mapa" },
+    { label: "Onde estamos", link: "/map" },
     { label: "Rádio Paz FM", link: "/radio" },
     { label: "Nossa igreja", link: "/history" },
   ];
