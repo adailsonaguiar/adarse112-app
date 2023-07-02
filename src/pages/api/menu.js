@@ -6,7 +6,7 @@ export default function handler(req, res) {
     { label: "Ofertas", link: "#dizimos" },
     { label: "Fotos", link: "#dizimos" },
     { label: "Mapa", link: "/map" },
-    { label: "Bíblia", link: "#billboard" },
+    { label: "Bíblia", link: "/bible/gn/1" },
     { label: "Rádio paz", link: "/radio" },
   ];
   res.status(200).json(menuLinks);
