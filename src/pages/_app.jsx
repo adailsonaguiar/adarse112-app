@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps }) {
 
         <meta name="keywords" content="COMUNHÃO, IGREJA, MADUREIRA" />
 
-        <link rel="shortcut icon" href="/img/logo-icon-512.png" />
-        <link rel="apple-touch-icon" href="/img/logo-icon-512.png" />
+        <link rel="shortcut icon" href="/img/logo-transparent.png" />
+        <link rel="apple-touch-icon" href="/img/logo-transparent.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#020024" />
         <link
