@@ -5,7 +5,7 @@ export default function handler(req, res) {
     { label: "Cultos", link: "#cultos" },
     { label: "Ofertas", link: "#dizimos" },
     { label: "Fotos", link: "#dizimos" },
-    { label: "Mapa", link: "#onde-estamos" },
+    { label: "Mapa", link: "/map" },
     { label: "Bíblia", link: "#billboard" },
     { label: "Rádio paz", link: "/radio" },
   ];
