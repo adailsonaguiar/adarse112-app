@@ -6,6 +6,8 @@ import BodyTemplate from "../../../components/BodyTemplate";
 import { Select } from "../../../components/Select";
 import { SelectOption } from "../../../components/SelectOption";
 import { Loading } from "../../../components/Loading";
+import { FormBible } from "../../../components/Bible/FormBible";
+import { BibleChapter } from "../../../components/Bible/BibleChapter";
 
 export default function Bible({ books, verses }) {
   const router = useRouter();
@@ -14,6 +16,8 @@ export default function Bible({ books, verses }) {
   const [chapterSelected, setChapterSelected] = React.useState(
     router.query.chapter
   );
+
+  const [verseSelected, setVerseSelected] = React.useState("");
 
   const chaptersBool = React.useMemo(() => {
     return Array.apply(null, Array(bookSelected?.chapters)).map(function (
@@ -52,51 +56,22 @@ export default function Bible({ books, verses }) {
 
   return (
     <BodyTemplate>
-      <div className="flex flex-col w-full px-10 py-10">
-        <div className="grid grid-cols-2 gap-10 justify-center w-full">
-          <Select
-            name="books"
-            label="Livros"
-            onChange={selectBook}
-            value={bookSelected?.name}
-          >
-            {books.map((book) => (
-              <SelectOption
-                key={book.chapters + book.name}
-                item={{ id: book.name, name: book.name }}
-              />
-            ))}
-          </Select>
-          <Select
-            name="chapter"
-            label="Capítulo"
-            onChange={selectChapter}
-            value={router.query.chapter}
-          >
-            {chaptersBool?.map((ch) => (
-              <SelectOption
-                key={ch}
-                item={{ id: ch, name: ch }}
-                selected={ch}
-              />
-            ))}
-          </Select>
-        </div>
-        <div className="flex flex-col items-center">
-          <h1 className="text-3xl text-white uppercase font-bold text-center py-10">
-            {bookSelected?.name} : {router.query.chapter}
-          </h1>
-          <div className="flex flex-col md:w-1/2">
-            {verses?.map((verse) => (
-              <p
-                key={verse.number}
-                className="text-2xl md:text-3xl text-white text-justify leading-relaxed tracking-wide mb-4"
-              >
-                <strong>{verse.number}</strong> {verse.text}
-              </p>
-            ))}
-          </div>
-        </div>
+      <div className="flex flex-col w-full px-10 py-10 items-center">
+        <FormBible
+          books={books}
+          chapters={chaptersBool}
+          selectBook={selectBook}
+          selectChapter={selectChapter}
+          bookSelected={bookSelected}
+          chapterSelected={router.query.chapter}
+        />
+        <BibleChapter
+          bookSelected={bookSelected}
+          chapterSelected={router.query.chapter}
+          verses={verses}
+          selectVerse={(verse) => setVerseSelected(verse)}
+          verseSelected={verseSelected}
+        />
       </div>
       {loading && <Loading />}
     </BodyTemplate>
