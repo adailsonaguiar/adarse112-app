@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/dist/client/link";
 import { XMarkIcon } from "@heroicons/react/24/solid";
@@ -10,6 +10,7 @@ function Header() {
     { label: "Onde estamos", link: "/map" },
     { label: "Rádio Paz FM", link: "/radio" },
     { label: "Nossa igreja", link: "/history" },
+    { label: "Bíblia", link: "/bible/gn/1" },
   ];
 
   return (
@@ -43,7 +44,7 @@ function Header() {
           <div className="w-8 h-1 bg-white"></div>
         </div>
       </header>
-     
+
       <div
         className={`fixed bg-madureira-700 left-0 top-0 right-0 bottom-0 z-30 transition-opacity ease-in-out delay-100 pointer-events-none ${
           isOpenMobileMenu ? "opacity-100 pointer-events-auto" : "opacity-0"
@@ -64,7 +65,11 @@ function Header() {
         </div>
         <nav className="flex flex-col text-2xl text-white items-center tracking-widest">
           {menuNavs.map((item, index) => (
-            <a key={index} href={item.link} className="py-5 border-b-[0.1rem] border-white/20 w-full text-center last:border-b-0 uppercase">
+            <a
+              key={index}
+              href={item.link}
+              className="py-5 border-b-[0.1rem] border-white/20 w-full text-center last:border-b-0 uppercase"
+            >
               {item.label}
             </a>
           ))}
