@@ -12,6 +12,8 @@ export const Player = () => {
   const play = () => {
     const radio = window.document.getElementById("radio");
 
+    if (radio.paused) radio.play();
+
     if (!played) {
       if (radio.played.length === 0) radio.play();
       else radio.muted = false;
@@ -72,7 +74,7 @@ export const Player = () => {
         ref={audioElmRef}
       >
         <source
-          src="https://8030.brasilstream.com.br/mp3?identifica=1180839757961402400"
+          src="https://player.radiopazpalmas.com.br/aovivo"
           type="audio/mpeg"
         />
       </audio>

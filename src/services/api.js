@@ -9,3 +9,11 @@ export const api = axios.create({
 export const bibleApi = axios.create({
   baseURL: process.env.NEXT_APP_BIBLE_API,
 });
+
+export const harpaApi = axios.create({
+  baseURL: process.env.NEXT_HARPA_API,
+});
+
+export const harpaNumberAPI = axios.create({
+  baseURL: process.env.NEXT_HARPA_NUMBER_API,
+});
